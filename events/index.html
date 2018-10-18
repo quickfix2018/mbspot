@@ -1,0 +1,14 @@
+---
+title: MB Sports - Upcoming Events
+description:  Keep up to date on all events involvoing MB Sports.  Boat Shows, Outings and more!
+---
+<section class="container padded">
+    <h2>Events</h2>
+
+    {% assign filteredEvents = site.events | where:"country",site.country %}
+    {% for event in filteredEvents %}
+        {{event.output}}
+    {% else %}
+        There are no events going on right now. Please check back with us again.
+    {% endfor %}
+</section>

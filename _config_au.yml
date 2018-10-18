@@ -1,0 +1,81 @@
+domain: 127.0.0.1
+url: http://127.0.0.1:4000/
+baseurl: ''
+designer_base_url: 'http://designer.mbboatsaustralia.com.au'
+title: MB Sports Austrailia
+country: 'AU'
+author:
+    contact_form: http://sophcon-webmailer.azurewebsites.net/mb/aus
+    twitter: mbboats
+    facebook: 'https://www.facebook.com/MBBoatsAustralia'
+    youtube: 'http://www.youtube.com/user/mbsportsvideos'
+    phone: '+61 03 5822 2108'
+    fax: ''
+    address: '207 Numurkah Road'
+    city: 'Shepparton'
+    state: 'Victoria'
+    zip: ''
+    geo:
+        long: '-36.350621'
+        lat: '145.401179'
+    
+
+bing-maps-key: "Agcek4i_ccZ-8fu_eYVCAJar1L3v6pr_bf7D2J2NQisJz98Cntz6nVVT1V2QQ-Kq"
+
+collections:
+  - events
+  - slides
+  - faqs
+  - timeline
+  - downloads
+
+sass:
+    style: :compressed
+
+markdown: kramdown
+js_dest: scripts
+
+image_targets:
+  - name: "mobile"
+    media: "(max-width: 768px)"
+  - name: "uhd"
+    media: "(min-width: 1921px)"
+
+defaults:
+  - scope:
+      path: ""
+      type: slides
+    values:
+      layout: slide
+      ratio_2x: true
+      ratio_4x: true
+      render_targets: true
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+  - scope:
+      page: ""
+      type: faqs
+    values:
+      layout: faq
+  - scope:
+      page: ""
+      type: timeline
+    values:
+      layout: timeline
+  - scope:
+      page: ""
+      type: downloads
+    values:
+      layout: download
+  - scope:
+      path: "models"
+    values:
+      layout: model
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default

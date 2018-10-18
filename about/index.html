@@ -1,0 +1,15 @@
+---
+title: About Us
+description: We started from a humble beginning in 1993 building the first MB boat in a friends barn just outside Merced, CA.
+---
+
+<section class="container padded">
+    <h2>Our History</h2>
+
+    <ul class="timeline">
+        {% assign sortedTimeline = site.timeline | sort: "sort_order" %}
+        {% for item in sortedTimeline %}
+        {{ item.output }}
+        {% endfor %}
+    </ul>
+</section>
